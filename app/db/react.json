@@ -1,0 +1,108 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "topicArea": ["TypeScript", "Introduction"],
+      "title": "What is TypeScript?",
+      "content": "TypeScript is a **superset of JavaScript** (everything you can do on JavaScript, you can do on TypeScript) that adds **static typing** and other features to the language. It was developed by Microsoft to improve the development process for large-scale JavaScript applications by introducing optional type declarations.\n \n > This is some test quote text.\n > \n \n Some more text\n \n <aside>\n 💡\n \n **Static typing** is a feature in programming languages where the type of a variable is known and enforced at compile-time (as in the case of **TypeScript**), meaning before the code is executed. In statically typed languages, variables, function parameters, and return values must have declared types, and the compiler ensures that these types are used correctly throughout the program.\n \n In contrast to **dynamic typing** (where types are checked at runtime, as with **JavaScript**), static typing ensures that many errors related to type mismatches are caught early—during the development process—before the code is executed.\n \n </aside>\n \n Here's a breakdown of what TypeScript offers:\n \n ### Key Features of TypeScript:\n \n 1. **Static Typing**:\n     - In JavaScript, variables can hold any type, and their types are determined at runtime. In TypeScript, we can explicitly define the types of variables, function parameters, and return values. This allows for catching type-related errors during development, rather than at runtime.\n     - Example:\n         \n         ```tsx\n         let age: number = 30;  // age is explicitly typed as a number\n         age = 'thirty';        // TypeScript will raise an error here\n         ```\n         \n 2. **Type Inference**:\n     - TypeScript can automatically infer types even if they are not explicitly declared, based on the assigned value.\n     - Example:\n         \n         ```tsx\n         let name = 'Frodo';  // TypeScript infers that name is a string\n         ```\n         \n 3. **Object-Oriented Programming Features**:\n     - TypeScript supports additional object-oriented features like **interfaces**, **enums**, **access modifiers** (`public`, `private`, `protected`), and **abstract classes**, which help organize and structure code in a more robust way.\n     - Example:\n         \n         ```tsx\n         class Person {\n           private name: string; // name is explicitly typed as a string\n         \n           constructor(name: string) { // the name parameter is explicitly typed as a string\n             this.name = name;\n           }\n         \n           greet(): string { // the return value of the greet() function is explicitly typed as a string\n             return `Hello, my name is ${this.name}`;\n           }\n         }\n         ```\n         \n 4. **Improved Tooling**:\n     - Because of type annotations, TypeScript provides better support for IDEs and text editors. This includes features like **autocomplete**, **refactoring tools**, and **type checking** while writing code, making the development experience smoother and more productive.\n 5. **Compilation to JavaScript**:\n     - TypeScript is not directly understood by browsers. It needs to be **compiled (transpiled)** into plain JavaScript that can run in any environment where JavaScript is supported.\n     - TypeScript code is typically compiled to ES5 or ES6, depending on browser compatibility needs.\n 6. **Cross-Platform Compatibility**:\n     - TypeScript compiles down to standard JavaScript, so it can run in **any browser** or **JavaScript runtime** (like Node.js). It works for both front-end and back-end applications.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Question 1?",
+          "answer": "Answer 1"
+        },
+        {
+          "id": 2,
+          "question": "Question 2?",
+          "answer": "Answer 2"
+        },
+        {
+          "id": 3,
+          "question": "Question 3?",
+          "answer": "Answer 3"
+        },
+        {
+          "id": 4,
+          "question": "Question 4?",
+          "answer": "Answer 4"
+        },
+        {
+          "id": 5,
+          "question": "Question 5?",
+          "answer": "Answer 5"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "topicArea": ["TypeScript", "Introduction"],
+      "title": "Why TypeScript?",
+      "content": "Using TypeScript brings a lot of benefits, but also comes with some trade-offs. Let’s take a look at the main advantages and disadvantages of using TypeScript.\n \n TypeScript is all about **type safety**. **Type safety** refers to the assurance that code will only operate on the correct types of data, preventing type-related errors during development and runtime. In **TypeScript**, type safety ensures that variables, function arguments, and return values adhere to their declared types, which helps avoid bugs and makes the code more reliable and predictable.\n \n https://x.com/kentcdodds/status/1763606063394496633\n \n ### **Advantages of TypeScript**\n \n 1. **Static Typing**\n     - TypeScript adds static types to JavaScript, allowing us to catch type errors **during development rather than at runtime**. This helps reduce bugs, improve code quality, and makes the code easier to debug.\n     - Example: If we declare a variable as `number` but mistakenly assign a `string`, TypeScript will catch it right away.\n 2. **Improved IDE Support**\n     - TypeScript provides better support in IDEs due to its types. Modern editors can offer code completion, type checking, and enhanced navigation features like 'go to definition' or 'find references,' which helps boost productivity.\n     - Example:\n         \n         ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/de98979d-725b-4ace-8593-51750b373df7/90a9fb7d-ef8d-4a8e-a3ea-92d1861437b3/image.png)\n         \n 3. **Early Error Detection**\n     - Since TypeScript checks types during development, many common bugs are caught before running the code. This saves time in debugging and testing.\n 4. **Better Code Maintainability**\n     - Type annotations make the code easier to understand for other developers (or for you after a while). You can easily see what each variable, function, or class is supposed to do without guessing.\n     - Types also serve as documentation, which helps developers understand the purpose and requirements of the code without needing extensive comments.\n 5. **Scalable Codebase**\n     - TypeScript is well-suited for larger projects. Its features like interfaces, enums, and access modifiers (`private`, `public`, `protected`) help enforce proper structure, which makes the code easier to scale and maintain over time.\n 6. **Supports Modern JavaScript Features**\n     - TypeScript allows us to use the latest JavaScript features, even before they are fully supported by browsers, and compiles them to versions of JavaScript that are compatible with older environments. This means you get the benefits of modern JavaScript without worrying about browser compatibility.\n 7. **Better Refactoring Tools**\n     - With a typed language, refactoring becomes more reliable. Renaming variables, extracting functions, or moving classes are much safer because the compiler can verify if the changes impact other parts of the code.\n \n ### **Disadvantages of TypeScript**\n \n 1. **Learning Curve**\n     - TypeScript adds complexity on top of JavaScript, which can be intimidating for beginners or those coming from a purely JavaScript background. Learning how to properly use types, generics, and other advanced TypeScript features can take some time.\n 2. **Requires Compilation**\n     - TypeScript code can’t be run directly by browsers or Node.js; it must be compiled into JavaScript first. This adds an additional build step, which can slow down development and deployment if not properly managed.\n 3. **Additional Configuration**\n     - Setting up TypeScript involves configuring a compiler (`tsconfig.json`) and ensuring that your build tools support TypeScript. This setup can be more challenging compared to working with vanilla JavaScript, especially if you need to integrate it with existing tooling or frameworks.\n 4. **Potential Overhead for Small Projects**\n     - For small or simple projects, the type-checking and configuration might feel like overkill. The benefits of TypeScript become more apparent as the complexity and size of the codebase grow, so it may not be the best choice for a tiny utility or prototype.\n 5. **Verbose Code**\n     - Adding type annotations and defining interfaces can sometimes make the code more verbose compared to plain JavaScript. This verbosity can be annoying if the extra types don’t add significant value or if they’re obvious (e.g., declaring `let age: number = 30;`).\n \n ### **When Should You Use TypeScript?**\n \n - **Complex Projects**: When you’re building a large-scale application that involves multiple developers, TypeScript is a great fit. It helps enforce consistency, reduces runtime errors, and simplifies collaboration.\n - **Refactoring/Legacy Projects**: TypeScript is useful for projects that require frequent refactoring. Its static typing and compile-time checks make sure that changes don’t break other parts of the system.\n - **Code Maintenance**: If long-term maintenance is critical, TypeScript helps because it makes the code more predictable and easier to understand, especially for new developers joining the team.\n \n ### **When TypeScript Might Not Be Ideal**\n \n - **Rapid Prototyping**: If you need to quickly create a simple prototype, the TypeScript setup can slow you down, especially if type annotations aren’t a priority.\n - **Learning Environment**: For beginners learning JavaScript, the additional complexity TypeScript brings may be overwhelming. It’s usually better to learn JavaScript fundamentals first before diving into TypeScript.\n \n <aside>\n 💡\n \n Typed languages, like TypeScript or Java, require you to declare variable types explicitly, ensuring type consistency throughout your code. Non-typed languages, like JavaScript or Python, allow variables to change types dynamically without any predefined type, offering more flexibility but with a higher risk of runtime errors.\n \n ### Typed Language Example (TypeScript):\n \n ```tsx\n function addNumbers(a: number, b: number): number {\n     return a + b;\n }\n \n let result: number = addNumbers(10, 20);  // Type-safe, catches errors at compile time\n ```\n \n In this example, the `addNumbers` function expects `number` arguments. If you pass a string, TypeScript will catch it during development.\n \n ### Non-Typed Language Example (JavaScript):\n \n ```jsx\n function addNumbers(a, b) {\n     return a + b;\n }\n \n let result = addNumbers(10, '20');  // No error, but output is '1020' (string concatenation)\n ```\n \n Here, JavaScript allows the function to accept any type, but the result may be unexpected due to implicit type coercion.\n \n **Typed languages** provide safer, more predictable code, especially for large projects, while **non-typed languages** offer flexibility and speed for smaller tasks or rapid prototyping.\n \n </aside>",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Question 1?",
+          "answer": "Answer 1"
+        },
+        {
+          "id": 2,
+          "question": "Question 2?",
+          "answer": "Answer 2"
+        },
+        {
+          "id": 3,
+          "question": "Question 3?",
+          "answer": "Answer 3"
+        },
+        {
+          "id": 4,
+          "question": "Question 4?",
+          "answer": "Answer 4"
+        },
+        {
+          "id": 5,
+          "question": "Question 5?",
+          "answer": "Answer 5"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "topicArea": ["TypeScript", "Introduction"],
+      "title": "Creating a React project",
+      "content": "\n## Easy way\n\n- Go to https://react.new/ to open a new CodeSandbox React project and start building there.\n\n## Recommended way\n\n- Use your local development environment (on your computer) and install:\n    - Vite\n    - Node.js\n    - Once Node.js and Vite are installed, run:\n        - To install all packages in a project\n            \n            ```bash\n            npm install\n            ```\n            \n        - To run you local development server\n            \n            ```bash\n            npm run dev\n            ```",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the easiest way to quickly start a new React project?",
+          "answer": "The easiest way is to go to [https://react.new/](https://react.new/) to open a new CodeSandbox React project and start building there."
+        },
+        {
+          "id": 2,
+          "question": "What is the recommended way to set up a React project?",
+          "answer": "The recommended way is to use your local development environment by installing **Node.js** and **Vite**."
+        },
+        {
+          "id": 3,
+          "question": "Which two tools do you need to install to set up a React project locally?",
+          "answer": "You need to install **Node.js** and **Vite**."
+        },
+        {
+          "id": 4,
+          "question": "After installing Node.js and Vite, what command should you run to install all project dependencies?",
+          "answer": "You should run the following command to install all packages in the project:\n\n```bash\nnpm install\n```"
+        },
+        {
+          "id": 5,
+          "question": "How do you start your local development server for a Vite-based React project?",
+          "answer": "To start the local development server, you should run:\n\n```bash\nnpm run dev\n```"
+        },
+        {
+          "id": 6,
+          "question": "Why is it recommended to use your local development environment for building React applications instead of online tools?",
+          "answer": "Using your local development environment provides more control, flexibility, and performance for managing dependencies, running a fast dev server, and building optimized production apps."
+        }
+      ]
+    }
+  ]
+}
