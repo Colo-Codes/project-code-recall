@@ -1,18 +1,15 @@
 "use client";
 
-import Navigation from "./components/Navigation";
 import MainContainer from "./components/MainContainer";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const router = useRouter();
 
   return (
     <>
-      <Navigation />
       <MainContainer>
         <Card
           className="py-4"
@@ -36,7 +33,6 @@ export default function Home() {
           </CardBody>
         </Card>
       </MainContainer>
-      <Footer />
     </>
   );
 }

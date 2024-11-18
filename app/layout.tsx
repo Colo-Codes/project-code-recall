@@ -4,6 +4,8 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { AuthProvider } from "@/context/AuthContext";
 import localFont from "next/font/local";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -34,7 +36,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextUIProvider>
-          <AuthProvider>{children}</AuthProvider>
+          <AuthProvider>
+            <Navigation />
+            {children}
+            <Footer />
+          </AuthProvider>
         </NextUIProvider>
       </body>
     </html>

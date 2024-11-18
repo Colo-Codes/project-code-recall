@@ -22,13 +22,11 @@ import {
 import Link from "@/components/custom-elements/Link";
 import { useCallback, useState } from "react";
 import { useAsyncList } from "@react-stately/data";
-import Navigation from "@/components/Navigation";
 import MainContainer from "@/components/MainContainer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import CustomBreadcrumbs from "@/components/CustomBreadcrumbs";
-import Footer from "@/components/Footer";
 
 const columns = [
   { name: "Topic", uid: "topic" },
@@ -174,7 +172,6 @@ export default function Home() {
 
   return (
     <>
-      <Navigation renderTopicNavButtons={false} />
       <MainContainer>
         <CustomBreadcrumbs>
           <BreadcrumbItem>
@@ -219,7 +216,6 @@ export default function Home() {
           </TableBody>
         </Table>
       </MainContainer>
-      <Footer />
     </>
   );
 }

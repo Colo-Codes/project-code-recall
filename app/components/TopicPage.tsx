@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navigation from "@/components/Navigation";
 import TopicCard from "@/components/TopicCard";
 import { BreadcrumbItem } from "@nextui-org/react";
 import MainContainer from "./MainContainer";
@@ -9,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import CustomBreadcrumbs from "@/components/CustomBreadcrumbs";
 import Link from "@/components/custom-elements/Link";
-import Footer from "@/components/Footer";
 
 export default function TopicPage({ id }) {
   const [topicId, setTopicId] = useState(id);
@@ -22,7 +20,6 @@ export default function TopicPage({ id }) {
 
   return (
     <>
-      <Navigation />
       <MainContainer>
         <CustomBreadcrumbs
         // chip={
@@ -54,7 +51,6 @@ export default function TopicPage({ id }) {
           setTopicOnParent={setTopicOnParent}
         />
       </MainContainer>
-      <Footer />
     </>
   );
 }
