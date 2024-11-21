@@ -3,7 +3,7 @@
 import { createContext, useEffect, useState, useContext } from "react";
 import { getUserData, signOutUser } from "@/hooks/useAuth";
 
-const AuthContext = createContext();
+const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
